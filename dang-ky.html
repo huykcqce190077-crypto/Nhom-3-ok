@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký — STREETKICKS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="site-header" data-page=""></header>
+
+  <!-- ===== FORM ĐĂNG KÝ ===== -->
+  <main class="auth-wrap">
+    <div class="auth-card auth-card--wide">
+      <h1>Gia nhập cộng đồng</h1>
+      <p class="auth-sub">Tạo tài khoản để mua sắm nhanh hơn và không bỏ lỡ những đợt phát hành giới hạn.</p>
+
+      <form class="js-validate" data-success="Đăng ký thành công!" novalidate>
+        <div class="grid grid--2" style="gap:0 22px">
+          <div class="field">
+            <label for="rg-name">Họ và tên</label>
+            <input id="rg-name" type="text" required placeholder="Nguyễn Văn A">
+            <p class="error-msg"></p>
+          </div>
+          <div class="field">
+            <label for="rg-email">Email address</label>
+            <input id="rg-email" type="email" required placeholder="user@streetkicks.com">
+            <p class="error-msg"></p>
+          </div>
+          <div class="field">
+            <label for="rg-phone">Số điện thoại</label>
+            <input id="rg-phone" type="tel" required data-min="9" placeholder="0123 456 789">
+            <p class="error-msg"></p>
+          </div>
+          <div class="field">
+            <label for="rg-pass">Mật khẩu</label>
+            <input id="rg-pass" type="password" required data-min="6" placeholder="••••••••">
+            <p class="error-msg"></p>
+          </div>
+          <div class="field">
+            <label for="rg-pass2">Xác nhận mật khẩu</label>
+            <input id="rg-pass2" type="password" required data-match="#rg-pass" placeholder="••••••••">
+            <p class="error-msg"></p>
+          </div>
+        </div>
+
+        <label class="checkbox-row" style="margin:6px 0 24px">
+          <input type="checkbox" required>
+          <span>Tôi đồng ý với <a href="#" style="text-decoration:underline">Điều khoản &amp; Chính sách bảo mật</a> của STREETKICKS.</span>
+        </label>
+
+        <button class="btn btn--red" type="submit">Đăng ký ngay →</button>
+      </form>
+
+      <p class="auth-foot">Đã có tài khoản? <a href="dang-nhap.html">Đăng nhập ngay</a></p>
+    </div>
+  </main>
+
+  <footer id="site-footer" data-status="false"></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

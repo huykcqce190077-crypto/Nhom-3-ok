@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STREETKICKS — Trang chủ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== TOP NAV BAR (render bởi main.js) ===== -->
+  <header id="site-header" data-page="home"></header>
+
+  <!-- ===== HERO: PHÁ BỎ MỌI GIỚI HẠN ===== -->
+  <section class="hero hero--split">
+    <div class="hero__inner">
+      <div>
+        <p class="hero__eyebrow">Không ngừng chuyển động, không ngừng bứt phá</p>
+        <h1>Phá bỏ mọi<br>giới hạn</h1>
+        <p class="hero__sub">Êm ái, bền bỉ và đầy cá tính.</p>
+        <a href="cua-hang.html" class="btn btn--white" style="margin-top:26px">Mua ngay</a>
+      </div>
+      <div class="hero__img">
+        <img src="https://i.ibb.co/1GZmsdvM/image.png" alt="Giày sneaker STREETKICKS nổi bật">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GIỚI THIỆU THƯƠNG HIỆU ===== -->
+  <section class="section">
+    <div class="container grid grid--2" style="align-items:center">
+      <div>
+        <h2>Thẩm mỹ, tuyệt đối, mạnh mẽ</h2>
+        <p style="color:var(--gray-text);margin-top:18px">
+          STREETKICKS không chỉ là một cửa hàng bán lẻ; chúng tôi là một đơn vị công nghiệp
+          chuyên tuyển chọn những mẫu giày độc bản. Sinh ra trong sự hối hả của thành phố,
+          chúng tôi từ chối những giá trị thông thường để mang đến cho bạn những sản phẩm
+          độc quyền, hiếm có và nguyên bản.
+        </p>
+      </div>
+      <div class="hero__img" style="box-shadow:8px 8px 0 var(--gray-2)">
+        <img src="https://i.ibb.co/21B4PBvt/image.png" alt="Giày đá bóng đỏ đen">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SẢN PHẨM BÁN CHẠY ===== -->
+  <section class="section" style="background-color: #0d0d0d; padding: 60px 0;">
+    <div class="container">
+      
+      <!-- CSS Tối Ưu Tỷ Lệ -->
+      <style>
+        .best-seller-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 24px;
+        }
+        .best-seller-header h2 {
+          font-family: 'Anton', sans-serif;
+          font-size: 2.5rem;
+          text-transform: uppercase;
+          line-height: 1;
+          margin: 0;
+          letter-spacing: 1px;
+        }
+        .best-seller-header .subtitle {
+          color: #bf8170;
+          font-family: 'Anton', sans-serif;
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-top: 6px;
+        }
+.best-seller-header .view-all {
+          font-family: 'Arima', serif;
+          font-size: 0.9rem;
+          color: #fff;
+          text-decoration: underline;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        
+        /* Layout Grid giúp ảnh trái bằng tổng chiều cao 2 ảnh phải */
+        .best-seller-grid {
+          display: grid;
+          grid-template-columns: 1.62fr 1fr;
+          gap: 20px;
+        }
+        
+        .right-column {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+          .best-seller-grid {
+            grid-template-columns: 1fr;
+          }
+          .right-column {
+            grid-template-rows: auto auto;
+          }
+        }
+
+        /* Thẻ chứa ảnh và thông tin */
+        .hot-card {
+          position: relative;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          overflow: hidden;
+          background-color: #000;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+        }
+
+        /* Container chứa ảnh để ép tỉ lệ co giãn */
+        .hot-card__img-wrap {
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+
+        .hot-card__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        
+        /* Gradient phủ đáy ảnh làm nổi bật chữ */
+        .hot-card__img-wrap::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 50%;
+          background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+          pointer-events: none;
+        }
+
+        /* Nội dung chữ đè lên ảnh */
+        .hot-card__content {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          z-index: 10;
+          text-align: left;
+        }
+        .hot-card__title {
+          font-family: 'Anton', sans-serif;
+          font-size: 1.8rem;
+          color: #fff;
+          text-transform: uppercase;
+          margin: 0;
+          line-height: 1.1;
+        }
+        .hot-card__title--small {
+          font-size: 1.25rem;
+        }
+        .hot-card__price {
+          font-size: 0.9rem;
+          color: #e57373;
+          margin-top: 4px;
+        }
+
+        /* Nhãn Hết Hàng */
+        .hot-card__badge {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background-color: #ffb4ab;
+          color: #7f1d1d;
+          font-family: 'Anton', sans-serif;
+          font-size: 0.75rem;
+          padding: 3px 8px;
+          text-transform: uppercase;
+          z-index: 10;
+          letter-spacing: 1px;
+        }
+      </style>
+
+      <!-- Tiêu đề & nút Xem tất cả -->
+      <div class="best-seller-header">
+<div>
+          <h2>Sản phẩm bán chạy</h2>
+          <div class="subtitle">Dòng cơ bản</div>
+        </div>
+        <a href="cua-hang.html" class="view-all">Xem tất cả</a>
+      </div>
+
+      <!-- Lưới sản phẩm đã căn chỉnh chiều cao đều nhau -->
+      <div class="best-seller-grid">
+        
+        <!-- Cột Trái: Ảnh lớn (Black Vortex V2) -->
+        <article class="hot-card">
+          <div class="hot-card__img-wrap">
+            <!-- Đã lược bỏ toàn bộ phần thẻ brand-logo-icon tại đây -->
+            <img class="hot-card__img" src="https://i.ibb.co/DPwk8NYf/image.png" alt="Black Vortex V2">
+          </div>
+          
+          <div class="hot-card__content">
+            <h3 class="hot-card__title">Black Vortex V2</h3>
+            <p class="hot-card__price">2.000.000 VND</p>
+          </div>
+        </article>
+
+        <!-- Cột Phải: 2 ảnh nhỏ (Tổng chiều cao tự động khớp bằng chiều cao ảnh bên trái) -->
+        <div class="right-column">
+          
+          <!-- Card trên: Ivory Wave (Hết hàng) -->
+          <article class="hot-card">
+            <div class="hot-card__img-wrap">
+              <span class="hot-card__badge">Hết hàng</span>
+              <img class="hot-card__img" src="https://i.ibb.co/GQQwTCXj/image.png" alt="Ivory Wave">
+            </div>
+            <div class="hot-card__content">
+              <h3 class="hot-card__title hot-card__title--small">Ivory Wave</h3>
+              <p class="hot-card__price" style="color: #9e9e9e;">1.800.000 VND</p>
+            </div>
+          </article>
+          
+          <!-- Card dưới: Red Menace -->
+          <article class="hot-card">
+            <div class="hot-card__img-wrap">
+              <!-- Đã lược bỏ toàn bộ phần thẻ favorite-icon tại đây -->
+              <img class="hot-card__img" src="https://i.ibb.co/WWq5w6Ft/image.png" alt="Red Menace">
+            </div>
+            <div class="hot-card__content">
+              <h3 class="hot-card__title hot-card__title--small">Red Menace</h3>
+              <p class="hot-card__price">2.100.000 VND</p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ===== FOOTER (render bởi main.js) ===== -->
+  <footer id="site-footer" data-status="false"></footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

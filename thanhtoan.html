@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng — STREETKICKS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header dùng chung -->
+  <header id="site-header" data-page=""></header>
+
+  <main class="section">
+    <div class="container grid cart-layout">
+      
+      <!-- CỘT TRÁI: DANH SÁCH SẢN PHẨM -->
+      <div class="cart-items-section">
+        <!-- Tiêu đề cột -->
+        <div class="cart-header">
+          <div>Sản phẩm</div>
+          <div style="text-align:center">Giá</div>
+          <div style="text-align:center">Số lượng</div>
+          <div style="text-align:right">Tổng cộng</div>
+        </div>
+
+        <!-- Sản phẩm 1 -->
+        <div class="cart-row">
+          <div class="cart-item-info">
+            <img src="https://i.ibb.co/YBbczMxz/image.png" alt="Streetkicks retro high og">
+            <div>
+              <h3>Streetkicks retro high og</h3>
+              <p>Chicago Hyper</p>
+            </div>
+          </div>
+          <div class="cart-item-price" data-price="3250000">3.250.000 VND</div>
+          <div class="cart-item-qty">
+            <div class="qty-control">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="text" class="qty-input" value="1" readonly>
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+          <div class="cart-item-total">3.250.000 VND</div>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="cart-row">
+          <div class="cart-item-info">
+            <img src="https://i.ibb.co/MqCDS9w/image.png" alt="Streetkicks retro high">
+            <div>
+              <h3>Streetkicks retro high</h3>
+              <p>Shattered Orange</p>
+            </div>
+          </div>
+          <div class="cart-item-price" data-price="3400000">3.400.000 VND</div>
+          <div class="cart-item-qty">
+            <div class="qty-control">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="text" class="qty-input" value="1" readonly>
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+          <div class="cart-item-total">3.400.000 VND</div>
+        </div>
+
+        <!-- Sản phẩm 3 -->
+        <div class="cart-row">
+          <div class="cart-item-info">
+            <img src="https://i.ibb.co/fZnnKSG/z8050770873744-76db8afc13c1607872155c482ec351e2-Photoroom.png" alt="Streetkicks retro high">
+            <div>
+              <h3>Streetkicks retro high</h3>
+              <p>Ochre Beat</p>
+</div>
+</div>
+          <div class="cart-item-price" data-price="2650000">2.650.000 VND</div>
+          <div class="cart-item-qty">
+            <div class="qty-control">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="text" class="qty-input" value="1" readonly>
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+          <div class="cart-item-total">2.650.000 VND</div>
+        </div>
+      </div>
+
+      <!-- CỘT PHẢI: TÓM TẮT ĐƠN HÀNG -->
+      <div class="cart-summary">
+        <h3 class="summary-title">Tóm tắt đơn hàng</h3>
+        
+        <div class="summary-row">
+          <span>Tạm tính</span>
+          <span id="cart-subtotal">9.300.000 VND</span>
+        </div>
+        <div class="summary-row">
+          <span>Phí vận chuyển</span>
+          <span id="cart-shipping">50.000 VND</span>
+        </div>
+        
+        <div style="margin: 20px 0; border-bottom: 1px solid #555; padding-bottom: 20px;">
+          <a href="#" style="color:#aaa; text-decoration:underline; font-size: 0.9rem;">Nhập vào mã giảm giá</a>
+        </div>
+
+        <div class="summary-row summary-total">
+          <span>Tổng cộng</span>
+          <span id="cart-total">9.350.000 VND</span>
+        </div>
+
+        <button class="btn btn--red" style="width:100%; padding: 15px; font-size:1.1rem; margin-top: 10px;">Thanh toán</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer dùng chung -->
+  <footer id="site-footer" data-status="false"></footer>
+  <script src="js/main.js"></script>
+
+  <!-- SCRIPT XỬ LÝ TÍNH TIỀN TRỰC TIẾP TRONG TRANG GIỎ HÀNG -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hàm định dạng số tiền VND
+      const formatVND = (num) => num.toLocaleString('vi-VN') + ' VND';
+
+      const updateCartTotals = () => {
+        let subtotal = 0;
+        
+        // Chạy qua từng dòng sản phẩm để tính lại giá
+        document.querySelectorAll('.cart-row').forEach(row => {
+          const price = parseInt(row.querySelector('.cart-item-price').dataset.price);
+          const qty = parseInt(row.querySelector('.qty-input').value);
+          const totalItem = price * qty;
+          
+          row.querySelector('.cart-item-total').textContent = formatVND(totalItem);
+          subtotal += totalItem;
+        });
+
+        // Cập nhật bảng Tóm tắt đơn hàng
+        document.getElementById('cart-subtotal').textContent = formatVND(subtotal);
+        
+        // Giả sử phí ship là 50k, nếu không có hàng thì phí ship 0đ
+        const shipping = subtotal > 0 ? 50000 : 0; 
+        document.getElementById('cart-shipping').textContent = formatVND(shipping);
+        
+        document.getElementById('cart-total').textContent = formatVND(subtotal + shipping);
+      };
+
+      // Bắt sự kiện bấm nút + và -
+document.querySelectorAll('.qty-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const input = e.target.parentElement.querySelector('.qty-input');
+          let qty = parseInt(input.value);
+
+          if (e.target.classList.contains('plus')) {
+            qty++;
+          } else if (e.target.classList.contains('minus') && qty > 1) {
+            qty--;
+          }
+          
+          input.value = qty;
+          updateCartTotals(); // Cập nhật lại tiền sau khi đổi số lượng
+        });
+      });
+
+      // Chạy tính tiền lần đầu khi load trang
+      updateCartTotals();
+    });
+  </script>
+</body>
+</html>

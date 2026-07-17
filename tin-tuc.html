@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tin tức — STREETKICKS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="site-header" data-page="news"></header>
+
+  <!-- ===== BANNER ===== -->
+  <section class="hero">
+    <div class="hero__inner">
+      <h1>Move with the culture</h1>
+    </div>
+  </section>
+
+  <!-- ===== THÔNG BÁO TỪ THƯƠNG HIỆU ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title"><h2>Thông báo từ thương hiệu</h2></div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin-bottom:26px">
+        <span class="price-pill" style="border-radius:4px;font-family:var(--font-head);letter-spacing:1px">
+          Nike ra mắt bộ sưu tập Summer Street 2026
+        </span>
+        <ul style="color:var(--gray-text);list-style:disc;padding-left:20px">
+          Thiết kế lấy cảm hứng từ văn hóa đường phố.</BR>
+          Màu sắc trẻ trung, năng động.
+        </ul>
+      </div>
+
+      <img src="https://i.ibb.co/MkGVzCf8/44.jpg"
+           alt="4 đôi giày trong bộ sưu tập mới" style="border-radius:8px;width:100%;object-fit:cover">
+    </div>
+  </section>
+
+  <!-- ===== THÔNG TIN SỰ KIỆN + TAB LỌC ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-title section-title--center"><h2>Thông tin sự kiện</h2></div>
+
+      <!-- Tabs -->
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-filter="all">Tất cả</button>
+        <button class="tab-btn" data-filter="event">Sự kiện</button>
+        <button class="tab-btn" data-filter="news">Tin tức</button>
+        <button class="tab-btn" data-filter="culture">Văn hóa</button>
+      </div>
+
+      <!-- Bài viết nổi bật -->
+      <article class="news-featured" data-category="event">
+        <img src="https://i.ibb.co/RGgsXP3H/uu.jpg" alt="Sự kiện ra mắt Summer Street 2026">
+        <div class="news-featured__content">
+          <p class="news-featured__tag">SỰ KIỆN</p>
+          <h2>Sự kiện đặc biệt:<br>Nike ra mắt bộ sưu tập Summer Street 2026</h2>
+          <ul style="list-style:disc;margin:10px 0">
+            Thiết kế lấy cảm hứng từ văn hóa đường phố.</br>
+            Màu sắc trẻ trung, năng động.
+          </ul>
+          <p style="font-family:var(--font-head);margin-bottom:16px">06/11/2026</p>
+          <a class="btn btn--red" href="#">Xem chi tiết</a>
+        </div>
+</article>
+
+      <!-- 3 card nhỏ -->
+      <div class="grid grid--3">
+        <article class="news-card" data-category="event">
+          <img src="https://i.ibb.co/jvYQS3xc/gg.jpg" alt="Streetwear Fashion Day 2026">
+          <div class="news-card__body">
+            <p class="news-card__tag"style="color:var(--red)">Sự kiện</p>
+            <h3>Streetwear Fashion Day 2026</h3>
+            <p><strong style="color:var(--red)">Thời gian: 27/09/2026</strong></p>
+            <p style="margin-top:8px">Trình diễn thời trang, trải nghiệm sản phẩm mới, mini game và quà tặng,
+            khu vực custom giày tại chỗ với nghệ sĩ, triển lãm nghệ thuật Sneaker Art độc đáo.</p>
+          </div>
+        </article>
+
+        <article class="news-card" data-category="news">
+          <img src="https://i.ibb.co/jvhH3GSR/ii.jpg" alt="Triển lãm và ra mắt sản phẩm">
+          <div class="news-card__body">
+            <p class="news-card__tag"style="color:var(--red)">Tin tức</p>
+            <h3>Triển lãm &amp; Ra mắt sản phẩm</h3>
+            <p><strong style="color:var(--red)">Thời gian: 15/10/2026</strong></p>
+            <p>Sự kiện giới thiệu thế hệ Air Max mới với thiết kế hiện đại, công nghệ đệm khí
+            cải tiến và phong cách streetwear đột phá.</p>
+          </div>
+        </article>
+
+        <article class="news-card" data-category="culture">
+          <img src="https://i.ibb.co/vvxyJdDb/image.png" alt="Đêm giao lưu Sneakerhead Việt">
+          <div class="news-card__body">
+            <p class="news-card__tag"style="color:var(--red)">Văn hóa</p>
+            <h3>Đêm giao lưu Sneakerhead Việt</h3>
+            <p><strong style="color:var(--red)">Thời gian: 23/04/2026</strong></p>
+            <p style="margin-top:8px">Đêm hội ngộ bùng nổ dành riêng cho các tín đồ đam mê giày tại Việt Nam.
+            Cùng kết nối, chia sẻ văn hóa sát mặt đất và chiêm ngưỡng những siêu phẩm cực hiếm.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer" data-status="true"></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm — STREETKICKS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* CSS bổ sung để tối ưu giao diện bảng size nếu style.css chưa có */
+    .size-chart-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    .size-chart-table th {
+      background-color: #111;
+      color: #fff;
+      font-family: var(--font-head), 'Anton', sans-serif;
+      font-weight: normal;
+      letter-spacing: 1px;
+      padding: 12px;
+      border: 1px solid #222;
+    }
+    .size-chart-table td {
+      padding: 12px;
+      border: 1px solid #222;
+      color: #ccc;
+    }
+    .size-chart-table tr:hover td {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+    .size-chart-note {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: #888;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header" data-page="shop"></header>
+
+  <!-- ===== CHI TIẾT SẢN PHẨM ===== -->
+  <section class="section">
+    <div class="container pd-layout">
+
+      <!-- Thumbnail dọc -->
+      <div class="pd-thumbs">
+        <img class="active" src="https://i.ibb.co/ZDmYGy5/image.png" alt="Ảnh 1">
+        <img src="https://i.ibb.co/TMwrnvxW/image.png" alt="Ảnh 2">
+        <img src="https://i.ibb.co/BHHmBsfF/image.png" alt="Ảnh 3">
+        <img src="https://i.ibb.co/xKCw0zF8/image.png" alt="Ảnh 4">
+        <img src="https://i.ibb.co/ZpzsC0TY/image.png" alt="Ảnh 5">
+      </div>
+
+      <!-- Ảnh chính -->
+      <div class="pd-main-img">
+        <img src="https://i.ibb.co/hR32qy06/image.png" alt="Nike Mercurial Superfly RGN SE">
+      </div>
+
+      <!-- Thông tin -->
+      <div class="pd-info">
+        <h1>Nike Mercurial Superfly RGN SE</h1>
+        <p class="prices">
+          <span class="price-old">3.950.000 VND</span>
+          <span class="price-red">3.250.00 VND</span>
+          <span class="stock">Hết hàng</span>
+        </p>
+        <ul class="pd-meta">
+          <li>• Sản phẩm này hiện tại không có sẵn.</li>
+          <li>• Màu sắc hiện thị: Metallic Gold Star / White</li>
+          <li>• Mã sản phẩm: 812995-900</li>
+          <li>• Xuất xứ: Trung Quốc</li>
+        </ul>
+
+        <p style="font-family:var(--font-head);letter-spacing:1px;margin-bottom:4px">Chọn size (EU)</p>
+        <div class="size-grid">
+          <button class="size-btn">38</button>
+          <button class="size-btn">39</button>
+<button class="size-btn">40</button>
+          <button class="size-btn">41</button>
+          <button class="size-btn">42</button>
+          <button class="size-btn">43</button>
+          <button class="size-btn">44</button>
+        </div>
+
+        <a href="thanhtoan.html" class="btn btn--red btn--block">THANH TOÁN</a>
+        <button class="btn btn--white btn--block" data-add-cart style="margin-top:12px">Thêm vào giỏ hàng</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ĐÁNH GIÁ KHÁCH HÀNG ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-title">
+        <h2>Đánh giá khách hàng</h2>
+        <p style="font-family:var(--font-head);font-size:1.6rem">4.8 <span style="color:#f5c518">★★★★★</span></p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="comment-card">
+          <div class="comment-card__user" style="margin-bottom:14px">
+            <span class="avatar"></span>
+            <div>
+              <p class="name">Minh Tú</p>
+              <p class="handle">5 tháng trước · ★★★★★</p>
+            </div>
+          </div>
+          <p class="quote">"Đôi giày tuyệt vời nhất mình từng sở hữu. Màu vàng kim loại thực sự nổi bật trên
+          sân. Độ ôm chân rất tốt, cảm giác bóng chuẩn thật."</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-card__user" style="margin-bottom:14px">
+            <span class="avatar"></span>
+            <div>
+              <p class="name">Hoàng Long</p>
+              <p class="handle">2 tháng trước · ★★★★★</p>
+            </div>
+          </div>
+          <p class="quote">"Giao hàng nhanh, đóng gói rất kỹ. Giày đẹp như hình, tuy nhiên nên chọn lên
+          nửa size nếu bàn chân bè. Rất đáng tiền!"</p>
+        </div>
+      </div>
+      <a href="danh-gia.html" class="btn btn--outline" style="margin-top:26px">Xem thêm</a>
+    </div>
+  </section>
+
+  <!-- ===== BẢNG SIZE CHI TIẾT ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-title">
+        <h2>BẢNG QUY ĐỔI SIZE GIÀY</h2>
+      </div>
+      
+      <div style="overflow-x:auto">
+        <table class="size-chart-table">
+          <thead>
+            <tr>
+              <th>US (MENS)</th>
+              <th>US (WMNS)</th>
+              <th>UK</th>
+              <th>EUR (EU)</th>
+              <th>CHIỀU DÀI CHÂN (CM)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5.5</td>
+              <td>7</td>
+              <td>5</td>
+              <td><strong>38</strong></td>
+              <td>24.0 cm</td>
+            </tr>
+            <tr>
+              <td>6.5</td>
+              <td>8</td>
+              <td>6</td>
+              <td><strong>39</strong></td>
+              <td>24.5 cm</td>
+            </tr>
+<tr style="background-color: rgba(214, 40, 40, 0.1);">
+              <td>7</td>
+              <td>8.5</td>
+              <td>6</td>
+              <td><strong>40 (Bán chạy)</strong></td>
+              <td>25.0 cm</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>9.5</td>
+              <td>7</td>
+              <td><strong>41</strong></td>
+              <td>26.0 cm</td>
+            </tr>
+            <tr>
+              <td>8.5</td>
+              <td>10</td>
+              <td>7.5</td>
+              <td><strong>42</strong></td>
+              <td>26.5 cm</td>
+            </tr>
+            <tr>
+              <td>9.5</td>
+              <td>11</td>
+              <td>8.5</td>
+              <td><strong>43</strong></td>
+              <td>27.5 cm</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>11.5</td>
+              <td>9</td>
+              <td><strong>44</strong></td>
+              <td>28.0 cm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="size-chart-note">
+        <p><strong>💡 Mẹo nhỏ chọn size:</strong></p>
+        <p>• Dòng giày bóng đá ôm chân (Form Slim-fit) như Mercurial thường có thiên hướng ôm sát hai bên cạnh bàn chân. Nếu bạn có <strong>bàn chân bè hoặc mu bàn chân dày</strong>, khuyến khích các bạn hãy chủ động <strong>tăng thêm 0.5 đến 1 size (size EU)</strong> so với giày chạy bộ thông thường để có trải nghiệm thoải mái nhất.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer" data-status="true"></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

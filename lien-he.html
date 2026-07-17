@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ — STREETKICKS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="site-header" data-page="contact"></header>
+
+  <!-- ===== BANNER ===== -->
+  <section class="hero">
+    <div class="hero__inner">
+      <h1>Liên hệ<br>với chúng tôi</h1>
+    </div>
+  </section>
+
+  <!-- ===== THÔNG TIN + FORM ===== -->
+  <section class="section">
+    <div class="container grid grid--2" style="align-items:start;gap:50px">
+
+      <!-- Cột trái: thông tin -->
+      <div>
+        <h2 style="max-width:420px">Chúng tôi luôn sẵn sàng hỗ trợ và giải đáp mọi thắc mắc của bạn</h2>
+        <p style="color:var(--gray-text);margin:22px 0 40px">
+          Chúng tôi luôn sẵn sàng lắng nghe ý kiến, giải đáp thắc mắc và hỗ trợ bạn trong quá
+          trình mua sắm. Hãy liên hệ với chúng tôi để được tư vấn về sản phẩm, đơn hàng hoặc
+          các chương trình ưu đãi mới nhất.
+        </p>
+
+        <div class="grid grid--2" style="gap:34px">
+          <div>
+            <h3>Trung tâm hỗ trợ</h3>
+            <p style="color:var(--gray-text)">800 100 975 20 34<br>(+123) 1800 234-5678</p>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <p style="color:var(--gray-text)">abcd@gmail.com</p>
+          </div>
+          <div>
+            <h3>Địa chỉ</h3>
+            <p style="color:var(--gray-text)">10 Phan Văn Trị, Phường An Phú,<br>Quận Ninh Kiều, TP. Cần Thơ</p>
+          </div>
+          <div>
+            <h3>Mạng xã hội</h3>
+            <img src="https://i.ibb.co/FbS7KgrZ/image.png" alt="Mạng xã hội" style="height:20px"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột phải: form liên hệ -->
+      <div class="contact-panel">
+        <h3 style="margin-bottom:10px">Liên hệ ngay</h3>
+        <p style="color:var(--gray-text);font-size:.92rem;margin-bottom:24px">
+          Mọi ý kiến đóng góp và thắc mắc của bạn đều rất quan trọng đối với chúng tôi.
+          Hãy liên hệ ngay để nhận được sự hỗ trợ tận tình và nhanh chóng.
+        </p>
+
+        <form class="js-validate" data-success="Đã gửi tin nhắn thành công!" novalidate>
+          <div class="field">
+            <label for="ct-name">Họ tên</label>
+            <input id="ct-name" type="text" required placeholder="Nguyễn Văn A">
+            <p class="error-msg"></p>
+          </div>
+          <div class="field">
+<label for="ct-email">Email</label>
+            <input id="ct-email" type="email" required placeholder="you@email.com">
+            <p class="error-msg"></p>
+          </div>
+          <div class="field">
+            <label for="ct-phone">Số điện thoại</label>
+            <input id="ct-phone" type="tel" required data-min="9" placeholder="0123 456 789">
+            <p class="error-msg"></p>
+          </div>
+          <div class="field">
+            <label for="ct-msg">Gửi yêu cầu</label>
+            <textarea id="ct-msg" rows="5" required placeholder="Nội dung cần hỗ trợ..."></textarea>
+            <p class="error-msg"></p>
+          </div>
+          <div style="text-align:right">
+            <button class="btn btn--red" type="submit">Gửi tin nhắn</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===== BẢN ĐỒ ===== -->
+    <div class="container map-embed">
+      <!-- iframe Google Maps: khu vực Ninh Kiều, Cần Thơ -->
+      <iframe
+        src="https://www.google.com/maps?q=10+Phan+Van+Tri,+Ninh+Kieu,+Can+Tho&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Bản đồ STREETKICKS - Ninh Kiều, Cần Thơ"></iframe>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ACCORDION ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container grid" style="grid-template-columns:1fr 1.4fr;gap:50px;align-items:start">
+      <div class="hero__img" style="box-shadow:none;background:var(--red);padding:34px;border-radius:0">
+        <img src="https://i.ibb.co/pHPFZSB/image.png" alt="Giày Nike Jordan đỏ đen">
+      </div>
+
+      <div>
+        <h2 style="margin-bottom:26px">Những câu hỏi thường gặp</h2>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-head">1. Làm thế nào để chọn đúng kích cỡ giày?
+              <span class="chev">▼</span></button>
+            <div class="accordion-body"><p>Bạn có thể tham khảo bảng size EU trên từng trang sản phẩm.
+              Đo chiều dài bàn chân (cm) rồi đối chiếu với bảng quy đổi; nếu ở giữa hai size, hãy chọn size lớn hơn.</p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">2. Sản phẩm có đảm bảo chất lượng không?
+              <span class="chev">▼</span></button>
+            <div class="accordion-body"><p>Mọi sản phẩm tại STREETKICKS đều là hàng chính hãng, được kiểm định
+              trước khi giao và đi kèm bảo hành sản phẩm.</p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">3. Tôi có thể đổi hoặc trả sản phẩm không?
+              <span class="chev">▼</span></button>
+<div class="accordion-body"><p>Có. Chúng tôi áp dụng chính sách đổi trả trong 30 ngày với sản phẩm
+              còn nguyên tem, hộp và chưa qua sử dụng.</p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">4. Thời gian giao hàng là bao lâu?
+              <span class="chev">▼</span></button>
+            <div class="accordion-body"><p>Nội thành Cần Thơ: 1–2 ngày. Các tỉnh thành khác: 2–5 ngày làm việc.
+              Miễn phí vận chuyển cho mọi đơn hàng.</p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">5. Làm thế nào để bảo quản giày luôn bền đẹp?
+              <span class="chev">▼</span></button>
+            <div class="accordion-body"><p>Vệ sinh bằng khăn ẩm và dung dịch chuyên dụng, tránh ngâm nước,
+              phơi nơi thoáng mát và dùng shoe tree để giữ form giày.</p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">6. Tôi có thể theo dõi đơn hàng của mình như thế nào?
+              <span class="chev">▼</span></button>
+            <div class="accordion-body"><p>Sau khi đặt hàng, bạn sẽ nhận mã vận đơn qua email/SMS để tra cứu
+              trực tiếp trên website của đơn vị vận chuyển.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer" data-status="true"></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

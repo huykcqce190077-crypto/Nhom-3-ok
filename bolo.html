@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bộ lọc sản phẩm</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Oswald',sans-serif;
+}
+
+body{
+    background:#bfbfbf;
+    display:flex;
+    justify-content:center;
+    padding:15px;
+}
+
+.filter{
+    width:410px;
+    background:#111;
+    color:#fff;
+    border:1px solid #333;
+}
+
+.title{
+    padding:20px;
+    font-size:30px;
+    font-weight:700;
+    border-bottom:1px solid #303030;
+}
+
+.section{
+    padding:18px 20px;
+    border-bottom:1px solid #303030;
+}
+
+.section h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+label{
+    display:block;
+    margin:5px 0;
+    cursor:pointer;
+    color:#ddd;
+}
+
+input[type="checkbox"]{
+    accent-color:white;
+}
+
+/* SIZE */
+
+.size-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:4px;
+}
+
+.size-list input{
+    display:none;
+}
+
+.size-list label{
+    text-align:center;
+    border:1px solid #666;
+    padding:6px 0;
+    background:#111;
+    color:#fff;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.size-list input:checked+label{
+    background:#fff;
+    color:#111;
+}
+
+/* PRICE */
+
+.price{
+    width:100%;
+}
+
+.range-text{
+    display:flex;
+    justify-content:space-between;
+    color:#888;
+    margin-top:8px;
+}
+
+/* COLORS */
+
+.colors{
+    display:flex;
+    gap:8px;
+}
+
+.colors input{
+    display:none;
+}
+
+.colors label{
+    width:22px;
+    height:22px;
+    border:2px solid #666;
+    cursor:pointer;
+}
+
+.colors input:checked+label{
+    outline:2px solid #fff;
+}
+
+.black{background:#000;}
+.white{background:#fff;}
+.red{background:#d73333;}
+.yellow{background:#f2c300;}
+
+</style>
+</head>
+
+<body>
+
+<div class="filter">
+
+<div class="title">
+TÌM KIẾM SẢN PHẨM
+</div>
+
+<div class="section">
+
+<h3>LOẠI SẢN PHẨM</h3>
+
+<label><input type="checkbox"> Sneakers</label>
+<label><input type="checkbox"> Boots</label>
+<label><input type="checkbox"> Deps</label>
+
+</div>
+
+<div class="section">
+
+<h3>KÍCH THƯỚC</h3>
+
+<div class="size-list">
+
+<input type="checkbox" id="s39">
+<label for="s39">39</label>
+
+<input type="checkbox" id="s40">
+<label for="s40">40</label>
+
+<input type="checkbox" id="s41">
+<label for="s41">41</label>
+
+<input type="checkbox" id="s42">
+<label for="s42">42</label>
+
+<input type="checkbox" id="s43">
+<label for="s43">43</label>
+
+<input type="checkbox" id="s44">
+<label for="s44">44</label>
+
+<input type="checkbox" id="s45">
+<label for="s45">45</label>
+
+<input type="checkbox" id="s46">
+<label for="s46">46</label>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h3>KHOẢNG GIÁ</h3>
+
+<input class="price" type="range" min="1000000" max="15000000" value="3000000">
+
+<div class="range-text">
+<span>1.000.000</span>
+<span>15.000.000</span>
+</div>
+
+</div>
+
+<div class="section">
+<h3>MÀU SẮC</h3>
+
+<div class="colors">
+
+<input type="checkbox" id="black">
+<label for="black" class="black"></label>
+
+<input type="checkbox" id="white">
+<label for="white" class="white"></label>
+
+<input type="checkbox" id="red">
+<label for="red" class="red"></label>
+
+<input type="checkbox" id="yellow">
+<label for="yellow" class="yellow"></label>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

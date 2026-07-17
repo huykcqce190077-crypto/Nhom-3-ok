@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập — STREETKICKS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="site-header" data-page=""></header>
+
+  <!-- ===== FORM ĐĂNG NHẬP (giữa trang, chữ STREETKICKS mờ phía sau) ===== -->
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <h1>Đăng nhập vào cộng đồng Streetkicks</h1>
+      <p class="auth-sub">Đăng nhập để nhận những ưu đãi đặc quyền và thông báo về các đợt "drop" mới nhất.</p>
+
+      <form class="js-validate" data-success="Đăng nhập thành công!" novalidate>
+        <div class="field">
+          <label for="lg-email">Email / Tên đăng nhập</label>
+          <input id="lg-email" type="text" required placeholder="user@streetkicks.com">
+          <p class="error-msg"></p>
+        </div>
+        <div class="field">
+          <label for="lg-pass">Mật khẩu</label>
+          <input id="lg-pass" type="password" required data-min="6" placeholder="••••••••">
+          <p class="error-msg"></p>
+        </div>
+
+        <div class="auth-row">
+          <label class="checkbox-row"><input type="checkbox"> Ghi nhớ đăng nhập</label>
+          <a href="#">Quên mật khẩu?</a>
+        </div>
+
+        <button class="btn btn--red btn--block" type="submit">Đăng nhập →</button>
+      </form>
+
+      <p class="auth-divider">Hoặc tiếp tục với</p>
+      <div class="social-btns">
+        <button class="btn" type="button">Google</button>
+        <button class="btn" type="button">Apple</button>
+      </div>
+
+      <p class="auth-foot">Chưa có tài khoản? <a href="dang-ky.html">Đăng ký ngay</a></p>
+    </div>
+  </main>
+
+  <footer id="site-footer" data-status="false"></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

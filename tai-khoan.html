@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài khoản — STREETKICKS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="site-header" data-page=""></header>
+
+  <!-- ===== CHỈNH SỬA HỒ SƠ ===== -->
+  <main class="auth-wrap" style="align-items:flex-start">
+    <div style="width:100%;max-width:640px;position:relative;z-index:2">
+
+      <!-- Avatar + tên -->
+      <div class="profile-head">
+        <div class="avatar" aria-hidden="true"></div>
+        <button class="avatar-edit" type="button">Sửa</button>
+        <p class="profile-name">Nguyễn Văn A</p>
+      </div>
+
+      <!-- Form thông tin -->
+      <form class="js-validate" data-success="Đã lưu thay đổi!" novalidate>
+        <div class="field">
+          <label for="pf-name">Họ và tên</label>
+          <input id="pf-name" type="text" required value="NGUYEN VAN A">
+          <p class="error-msg"></p>
+        </div>
+        <div class="field">
+          <label for="pf-email">Email</label>
+          <input id="pf-email" type="email" required value="nguyenvana@gmail.com">
+          <p class="error-msg"></p>
+        </div>
+        <div class="field">
+          <label for="pf-user">Tên người dùng</label>
+          <input id="pf-user" type="text" required value="nguyenvana18">
+          <p class="error-msg"></p>
+        </div>
+        <div class="field">
+          <label for="pf-phone">Số điện thoại</label>
+          <input id="pf-phone" type="tel" required data-min="9" value="01258963547">
+          <p class="error-msg"></p>
+        </div>
+
+        <!-- 3 nút hành động -->
+        <div class="profile-actions">
+          <button class="btn btn--red" type="button">Hủy tài khoản</button>
+          <span class="spacer"></span>
+          <a class="btn btn--gray" href="index.html">Thoát</a>
+          <button class="btn btn--white" type="submit">Lưu</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer id="site-footer" data-status="false"></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
